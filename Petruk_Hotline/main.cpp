@@ -5,55 +5,79 @@ using namespace std;
 
 int main(){
     int option;
-    cout<<"Welcome to the Petruk Hotline" << endl;
+    cout<<"Welcome to the Petruk Hotline" << endl;  // Menampilkan pesan selamat datang
     Sleep(1000);  
-    cout<<"Please select an option" << endl;
+    cout<<"Please select an option" << endl;  // Menampilkan pesan untuk memilih opsi
     Sleep(1000);  
-    cout<<"1.Sequence, 2.PEMDAS" << endl;
+    cout<<"1.Sequence, 2.PEMDAS" << endl;  // Menampilkan pilihan opsi
     cin>>option;
     
     if(option == 1){
-        cout << "What do you want me to help you with in Sequence?" << endl;
+        cout << "What do you want me to help you with in Sequence?" << endl;  // Menampilkan pilihan bantuan dalam Sequence
+        Sleep(1500);  
+        cout << "Fine" << endl;
         Sleep(1000);  
-        cout << "1.Definition?, 2.Calculator" << endl;
+        cout << "1.Definition?, 2.Calculator" << endl;  // Menampilkan pilihan definisi atau kalkulator
         int sequence;
         cin >> sequence;
         
         if(sequence == 1){
-            cout << "A sequence is basically an ordered list with a certain rule!" << endl;
+            cout << "I will finish you yo!" << endl;
+            Sleep(1000);
+            cout << "A sequence is basically an ordered list with a certain rule!" << endl;  // Menampilkan definisi Sequence
         }
         else if(sequence == 2){
             double operationType, multiplierDivisor, addition, initialNumber, loopCount;
             
-            cout << "What kind of operation? 1.Multiplication, 2.Division" << endl;
+            cout << "What kind of operation? 1.Multiplication, 2.Division" << endl;  // Memilih jenis operasi
             cin >> operationType;
             
-            cout << "Enter the multiplication/division factor" << endl;
+            cout << "Enter the multiplication/division factor" << endl;  // Memasukkan faktor perkalian/pembagian
             cin >> multiplierDivisor;
             
-            cout << "Enter the addition value" << endl;
+            cout << "Enter the addition value" << endl;  // Memasukkan nilai penambahan
             cin >> addition;
             
-            cout << "Enter the initial number" << endl;
+            cout << "Enter the initial number" << endl;  // Memasukkan angka awal
             cin >> initialNumber;
             
-            cout << "Enter how many times you want to loop it" << endl;
+            cout << "Enter how many times you want to loop it" << endl;  // Memasukkan berapa kali iterasi
             cin >> loopCount;
             
             if(operationType == 1){
                 for (int i = 0; i < loopCount; i++){
-                    initialNumber = initialNumber * multiplierDivisor + addition;
-                    cout << initialNumber << endl;
+                    initialNumber = initialNumber * multiplierDivisor + addition;  // Perhitungan untuk operasi perkalian
+                    cout << initialNumber << endl;  // Menampilkan hasil perhitungan
                 }
             }
             else if(operationType == 2){
                 for (int i = 0; i < loopCount; i++){
-                    initialNumber = initialNumber / multiplierDivisor + addition;
-                    cout << initialNumber << endl;
+                    initialNumber = initialNumber / multiplierDivisor + addition;  // Perhitungan untuk operasi pembagian
+                    cout << initialNumber << endl;  // Menampilkan hasil perhitungan
                 }
             }
         }
+    }else if(option == 2){
+        cout <<"See this boy" << endl;
+        Sleep(2000);
+        cout <<"Alright" << endl;
+        Sleep(1000);
+        cout <<"So PEMDAS is an acronym" << endl;
+        Sleep(1000);
+        cout <<"So P is for parentheses() " << endl;
+        Sleep(1000);
+        cout <<"So E is for Exponent " << endl;
+        Sleep(1000);
+        cout <<"So M is for Multiplication " << endl;
+        Sleep(1000);
+        cout <<"So D is for Division " << endl;
+        Sleep(1000);
+        cout <<"So A is for Addition " << endl;
+        Sleep(1000);
+        cout <<"So S is for Substraction " << endl;
+        Sleep(1000);
+        cout <<"So we prioritize P, Then E, then M and D, after that A and S " << endl;
     }
     
-    return 0;  
+    return 0;  // Mengakhiri program
 }
