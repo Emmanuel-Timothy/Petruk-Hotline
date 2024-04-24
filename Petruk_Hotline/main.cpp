@@ -15,15 +15,17 @@ int main(){
     if(option == 1){
         cout << "What do you want me to help you with in Sequence?" << endl;  // Menampilkan pilihan bantuan dalam Sequence
         Sleep(1500);  
-        cout << "Fine" << endl;
-        Sleep(1000);  
         cout << "1.Definition?, 2.Calculator" << endl;  // Menampilkan pilihan definisi atau kalkulator
         int sequence;
         cin >> sequence;
         
         if(sequence == 1){
+            cout << "What is sequence you ask!?" << endl;
+            Sleep(500);
             cout << "I will finish you yo!" << endl;
             Sleep(1000);
+            cout << "alright" << endl;
+            Sleep(500);
             cout << "A sequence is basically an ordered list with a certain rule!" << endl;  // Menampilkan definisi Sequence
         }
         else if(sequence == 2){
@@ -82,7 +84,7 @@ int main(){
     }else if(option == 3){
         double num1,num2;
         char op;
-        cout << "If you are in africa, you will be standing outside yo!" << endl;
+        cout << "If you are in africa, you will be standing outside for using calculator yo!" << endl;
         Sleep(2500);
         cout << "Fine, I will allow you!" << endl;
 
@@ -118,10 +120,8 @@ int main(){
                     break;
 
                 default:
-                    cout << "Walawe, What are you doing" << endl;
+                    cout << "This boy, What are you doing" << endl;
                     return 1; // Exiting program due to invalid operator
     }
-    
-    return 0;  // Mengakhiri program
 }
 }
