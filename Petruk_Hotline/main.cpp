@@ -9,7 +9,7 @@ int main(){
     Sleep(1000);  
     cout<<"Please select an option" << endl;  // Menampilkan pesan untuk memilih opsi
     Sleep(1000);  
-    cout<<"1.Sequence, 2.PEMDAS" << endl;  // Menampilkan pilihan opsi
+    cout<<"1.Sequence, 2.PEMDAS, 3.Calculator" << endl;  // Menampilkan pilihan opsi
     cin>>option;
     
     if(option == 1){
@@ -28,7 +28,9 @@ int main(){
         }
         else if(sequence == 2){
             double operationType, multiplierDivisor, addition, initialNumber, loopCount;
-            
+            cout << "This boy, imagine using calculator!" << endl;  // Menampilkan pesan untuk menggunakan kalkulator
+            Sleep(500);
+
             cout << "What kind of operation? 1.Multiplication, 2.Division" << endl;  // Memilih jenis operasi
             cin >> operationType;
             
@@ -77,6 +79,29 @@ int main(){
         cout <<"So S is for Substraction " << endl;
         Sleep(1000);
         cout <<"So we prioritize P, Then E, then M and D, after that A and S " << endl;
+    }else if(option == 3){
+        double num1,num2;
+        char op;
+        cout << "Enter first number: ";
+        cin >> num1;
+        cout << "Enter operator(+,-,*,/): ";
+        cin >> op;
+        cout << "Enter second number: ";
+        cin >> num2;
+        double result;
+        if (op == '+'){
+            result = num1 + num2;
+        }else if (op == '-')
+        {
+            result = num1 - num2;
+        }else if(op == '*'){
+            result = num1 * num2;
+        }else if(op == '/'){
+            result = num1 / num2;
+        }else{
+            cout << "Walawe, What are you doing";
+        }
+        cout << result;
     }
     
     return 0;  // Mengakhiri program
