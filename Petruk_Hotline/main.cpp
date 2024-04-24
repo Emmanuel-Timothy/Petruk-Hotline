@@ -82,27 +82,46 @@ int main(){
     }else if(option == 3){
         double num1,num2;
         char op;
+        cout << "If you are in africa, you will be standing outside yo!" << endl;
+        Sleep(2500);
+        cout << "Fine, I will allow you!" << endl;
+
         cout << "Enter first number: ";
         cin >> num1;
+
         cout << "Enter operator(+,-,*,/): ";
         cin >> op;
+
         cout << "Enter second number: ";
         cin >> num2;
+
         double result;
-        if (op == '+'){
-            result = num1 + num2;
-        }else if (op == '-')
-        {
-            result = num1 - num2;
-        }else if(op == '*'){
-            result = num1 * num2;
-        }else if(op == '/'){
-            result = num1 / num2;
-        }else{
-            cout << "Walawe, What are you doing";
-        }
-        cout << result;
+            switch(op) {
+                case '+':
+                    result = num1 + num2;
+                    cout << result;
+                    break;
+                
+                case '-':
+                    result = num1 - num2;
+                    cout << result;
+                    break;
+
+                case '*':
+                    result = num1 * num2;
+                    cout << result;
+                    break;
+
+                case '/':
+                    result = num1 / num2;
+                    cout << result;
+                    break;
+
+                default:
+                    cout << "Walawe, What are you doing" << endl;
+                    return 1; // Exiting program due to invalid operator
     }
     
     return 0;  // Mengakhiri program
+}
 }
