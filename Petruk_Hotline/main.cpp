@@ -139,7 +139,9 @@ void handleCalculator() {
         cin >> calc;
     }
 }
-
+void Geometry(){
+    
+}
 int main(){
     cout << "Welcome to the Petruk Hotline" << endl;
     Sleep(1000);  
