@@ -53,7 +53,7 @@ void handleSequence() {
                 }
             }
             else{
-                cout << "BOY!, You enter the wrong number, there is ONLY 2 NUMBER HOW DID YOU MESSED UP" << endl;
+                cout << "BOY!, You enter the wrong number, there are ONLY 2 NUMBER HOW DID YOU MESSED UP" << endl;
             }
         }
     }
@@ -178,7 +178,7 @@ void handleGeometry() {
                         break;
 
                     default:
-                        cout << "BOY!, You enter the wrong number, there is ONLY 3 NUMBER HOW DID YOU MESSED UP" << endl;
+                        cout << "BOY!, You enter the wrong number, there are ONLY 3 NUMBER HOW DID YOU MESSED UP" << endl;
                         break;
                 }
                 break;
@@ -221,7 +221,7 @@ void handleGeometry() {
                         break;
 
                     default:
-                        cout << "BOY!, You enter the wrong number, there is ONLY 4 NUMBER HOW DID YOU MESSED UP" << endl;
+                        cout << "BOY!, You enter the wrong number, there are ONLY 4 NUMBER HOW DID YOU MESSED UP" << endl;
                         break;
 
                 }
@@ -254,7 +254,7 @@ void handleGeometry() {
                         break;
 
                     default:
-                        cout << "BOY!, You enter the wrong number, there is ONLY 3 NUMBER HOW DID YOU MESSED UP" << endl;
+                        cout << "BOY!, You enter the wrong number, there are ONLY 3 NUMBER HOW DID YOU MESSED UP" << endl;
                         break;
                 }
                 break;
@@ -285,7 +285,7 @@ void handleGeometry() {
                         break;
 
                     default:
-                        cout << "BOY!, You enter the wrong number, there is ONLY 3 NUMBER HOW DID YOU MESSED UP" << endl;
+                        cout << "BOY!, You enter the wrong number, there areee ONLY 3 NUMBER HOW DID YOU MESSED UP" << endl;
                         break;
                 }
                 break;
@@ -316,7 +316,7 @@ void handleGeometry() {
                         break;
 
                     default:
-                        cout << "BOY!, You enter the wrong number, there is ONLY 3 NUMBER HOW DID YOU MESSED UP" << endl;
+                        cout << "BOY!, You enter the wrong number, there are ONLY 3 NUMBER HOW DID YOU MESSED UP" << endl;
                         break;
                 }
                 break;
@@ -348,7 +348,7 @@ void handleGeometry() {
                         break;
 
                     default:
-                        cout << "BOY!, You enter the wrong number, there is ONLY 3 NUMBER HOW DID YOU MESSED UP" << endl;
+                        cout << "BOY!, You enter the wrong number, there are ONLY 3 NUMBER HOW DID YOU MESSED UP" << endl;
                         break;
                 }
                 break;
@@ -379,7 +379,7 @@ void handleGeometry() {
                         break;
 
                     default:
-                        cout << "BOY!, You enter the wrong number, there is ONLY 3 NUMBER HOW DID YOU MESSED UP" << endl;
+                        cout << "BOY!, You enter the wrong number, there are ONLY 3 NUMBER HOW DID YOU MESSED UP" << endl;
                         break;
                 }
                 break;
@@ -411,7 +411,7 @@ void handleGeometry() {
                         break;
 
                     default:
-                        cout << "BOY!, You enter the wrong number, there is ONLY 3 NUMBER HOW DID YOU MESSED UP" << endl;
+                        cout << "BOY!, You enter the wrong number, there are ONLY 3 NUMBER HOW DID YOU MESSED UP" << endl;
                         break;
                 }
                 break;
@@ -443,7 +443,7 @@ void handleGeometry() {
                         break;
 
                     default:
-                        cout << "BOY!, You enter the wrong number, there is ONLY 3 NUMBER HOW DID YOU MESSED UP" << endl;
+                        cout << "BOY!, You enter the wrong number, there are ONLY 3 NUMBER HOW DID YOU MESSED UP" << endl;
                         break;
                 }
                 break;
@@ -454,13 +454,13 @@ void handleGeometry() {
                 break;
 
             default:
-                cout << "BOY!, You enter the wrong number, there is ONLY 10 NUMBER HOW DID YOU MESSED UP" << endl;
+                cout << "BOY!, You enter the wrong number, there are ONLY 10 NUMBER HOW DID YOU MESSED UP" << endl;
                 break;
         }
     }
 }
 
-
+// Function to handle Angles option
 void handleAngles(){
     int sides;
     double sumOfInteriorAngles;
@@ -471,6 +471,7 @@ void handleAngles(){
     cout << "Sum of Interior Angles of the polygon: " << sumOfInteriorAngles << " degrees" << endl;
 }
 
+// The main function
 int main(){
     cout << "Welcome to the Petruk Hotline" << endl;
     cout << "Everything is inside of me" << endl;
@@ -509,7 +510,7 @@ int main(){
                 break;
 
             default:
-                cout << "BOY!, You enter the wrong number, there is ONLY A FEW NUMBER HOW DID YOU MESSED UP" << endl;
+                cout << "BOY!, You enter the wrong number, there are ONLY A FEW NUMBER HOW DID YOU MESSED UP" << endl;
                 break;
         }
     }
