@@ -234,7 +234,7 @@ void handleGeometry() {
                 double length, width, perimeter, area;
                 cout << "Enter the length of the rectangle: ";
                 cin >> length;
-                cout << "Enter the width of the rectangle";
+                cout << "Enter the width of the rectangle: ";
                 cin >> width;
                 cout << "1. Calculate Perimeter\n2. Calculate Area\n0. Back to Menu" << endl;
                 cin >> option;
