@@ -8,7 +8,7 @@ using namespace std;
 void displayWelcomeMessage() {
     cout << "Please select an option" << endl;
     Sleep(1000);
-    cout << "1.Sequence, 2.PEMDAS, 3.Calculator, 4.Geometry, 5.Sum of Interior Angles, 0.Exit" << endl;
+    cout << "1.Sequence, 2.PEMDAS, 3.Calculator, 4.Geometry, 5.Angles, 0.Exit" << endl;
 }
 
 // Function to handle Sequence option
@@ -473,6 +473,8 @@ void handleAngles(){
 
 int main(){
     cout << "Welcome to the Petruk Hotline" << endl;
+    cout << "Everything is inside of me" << endl;
+    cout << "So ask me anything" << endl;
     Sleep(1000);  
     int option = -1; // Initialize option with an invalid value
 
