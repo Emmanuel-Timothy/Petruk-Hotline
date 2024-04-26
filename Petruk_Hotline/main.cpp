@@ -8,7 +8,7 @@ using namespace std;
 void displayWelcomeMessage() {
     cout << "Please select an option" << endl;
     Sleep(1000);
-    cout << "1.Sequence, 2.PEMDAS, 3.Calculator, 4.Geometry, 5.Angles, 0.Exit" << endl;
+    cout << "1.Sequence, 2.PEMDAS, 3.Calculator, 4.Geometry, 5.Angles, 6.Pytagoras, 7.Quadratic,0.Exit" << endl;
 }
 
 // Function to handle Sequence option
@@ -471,6 +471,57 @@ void handleAngles(){
     cout << "Sum of Interior Angles of the polygon: " << sumOfInteriorAngles << " degrees" << endl;
 }
 
+// Function to handle Pythagoras option
+void handlePythagoras() {
+    int option;
+    while(option != 0){
+        cout << "Choose an option:" << endl;
+        cout << "1. Find side C (hypotenuse)" << endl;
+        cout << "2. Find side A or B" << endl;
+        cout << "0.Exit" << endl;
+        cin >> option;
+
+        switch(option) {
+            case 1: {
+                double sideA, sideB, hypotenuse;
+
+                cout << "Enter the length of side A: ";
+                cin >> sideA;
+
+                cout << "Enter the length of side B: ";
+                cin >> sideB;
+
+                // Pythagorean theorem: c^2 = a^2 + b^2
+                hypotenuse = sqrt(sideA * sideA + sideB * sideB);
+
+                cout << "The length of the hypotenuse (side C) is: " << hypotenuse << endl;
+                break;
+            }
+            case 2: {
+                double sideA, sideC, sideB;
+
+                cout << "Enter the length of side A: ";
+                cin >> sideA;
+
+                cout << "Enter the length of the hypotenuse (side C): ";
+                cin >> sideC;
+
+                // Pythagorean theorem: a^2 = c^2 - b^2
+                // Solve for side B
+                sideB = sqrt(sideC * sideC - sideA * sideA);
+
+                cout << "The length of side B is: " << sideB << endl;
+                break;
+            case 0:
+                break;
+            }
+            default:
+                cout << "Invalid option selected" << endl;
+                break;
+        }
+    }
+}
+
 // The main function
 int main(){
     cout << "Welcome to the Petruk Hotline" << endl;
@@ -503,6 +554,11 @@ int main(){
             case 5:
                 handleAngles();
                 break;
+
+            case 6:
+                handlePythagoras();
+                break;
+
 
             case 0:
                 cout << "Okay, so we are done, Go home!" << endl;
