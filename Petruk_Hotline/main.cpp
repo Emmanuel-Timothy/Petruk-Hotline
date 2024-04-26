@@ -8,7 +8,7 @@ using namespace std;
 void displayWelcomeMessage() {
     cout << "Please select an option" << endl;
     Sleep(1000);
-    cout << "1.Sequence, 2.PEMDAS, 3.Calculator, 4.Geometry, 5.Sum of Interior Angles, 0.Exit" << endl;
+    cout << "1.Sequence, 2.PEMDAS, 3.Calculator, 4.Geometry, 5.Angles, 6.Pytagoras,0.Exit" << endl;
 }
 
 // Function to handle Sequence option
@@ -53,7 +53,7 @@ void handleSequence() {
                 }
             }
             else{
-                cout << "BOY!, You enter the wrong number, there is ONLY 2 NUMBER HOW DID YOU MESSED UP" << endl;
+                cout << "BOY!, You enter the wrong number, there are ONLY 2 NUMBER HOW DID YOU MESSED UP" << endl;
             }
         }
     }
@@ -178,7 +178,7 @@ void handleGeometry() {
                         break;
 
                     default:
-                        cout << "BOY!, You enter the wrong number, there is ONLY 3 NUMBER HOW DID YOU MESSED UP" << endl;
+                        cout << "BOY!, You enter the wrong number, there are ONLY 3 NUMBER HOW DID YOU MESSED UP" << endl;
                         break;
                 }
                 break;
@@ -189,7 +189,11 @@ void handleGeometry() {
                 int triangleOption;
                 double side1, side2, side3, perimeter, area, base, height, s;
                 cout << "Enter the lengths of the three sides of the triangle: ";
-                cin >> side1 >> side2 >> side3;
+                cin >> side1;
+                cout << "Enter another the lengths of the three sides of the triangle: ";
+                cin >> side2;
+                cout << "Enter another the lengths of the three sides of the triangle: ";
+                cin >> side3;               
                 cout << "Enter the base of the triangle: ";
                 cin >> base;
                 cout << "Enter the height of the triangle: ";
@@ -217,7 +221,7 @@ void handleGeometry() {
                         break;
 
                     default:
-                        cout << "BOY!, You enter the wrong number, there is ONLY 4 NUMBER HOW DID YOU MESSED UP" << endl;
+                        cout << "BOY!, You enter the wrong number, there are ONLY 4 NUMBER HOW DID YOU MESSED UP" << endl;
                         break;
 
                 }
@@ -228,9 +232,10 @@ void handleGeometry() {
                 // Rectangle calculations
                 int option;
                 double length, width, perimeter, area;
-                cout << "Enter the length and width of the rectangle: ";
-                cin >> length >> width;
-
+                cout << "Enter the length of the rectangle: ";
+                cin >> length;
+                cout << "Enter the width of the rectangle: ";
+                cin >> width;
                 cout << "1. Calculate Perimeter\n2. Calculate Area\n0. Back to Menu" << endl;
                 cin >> option;
 
@@ -249,7 +254,7 @@ void handleGeometry() {
                         break;
 
                     default:
-                        cout << "BOY!, You enter the wrong number, there is ONLY 3 NUMBER HOW DID YOU MESSED UP" << endl;
+                        cout << "BOY!, You enter the wrong number, there are ONLY 3 NUMBER HOW DID YOU MESSED UP" << endl;
                         break;
                 }
                 break;
@@ -280,7 +285,7 @@ void handleGeometry() {
                         break;
 
                     default:
-                        cout << "BOY!, You enter the wrong number, there is ONLY 3 NUMBER HOW DID YOU MESSED UP" << endl;
+                        cout << "BOY!, You enter the wrong number, there areee ONLY 3 NUMBER HOW DID YOU MESSED UP" << endl;
                         break;
                 }
                 break;
@@ -311,7 +316,7 @@ void handleGeometry() {
                         break;
 
                     default:
-                        cout << "BOY!, You enter the wrong number, there is ONLY 3 NUMBER HOW DID YOU MESSED UP" << endl;
+                        cout << "BOY!, You enter the wrong number, there are ONLY 3 NUMBER HOW DID YOU MESSED UP" << endl;
                         break;
                 }
                 break;
@@ -343,7 +348,7 @@ void handleGeometry() {
                         break;
 
                     default:
-                        cout << "BOY!, You enter the wrong number, there is ONLY 3 NUMBER HOW DID YOU MESSED UP" << endl;
+                        cout << "BOY!, You enter the wrong number, there are ONLY 3 NUMBER HOW DID YOU MESSED UP" << endl;
                         break;
                 }
                 break;
@@ -374,7 +379,7 @@ void handleGeometry() {
                         break;
 
                     default:
-                        cout << "BOY!, You enter the wrong number, there is ONLY 3 NUMBER HOW DID YOU MESSED UP" << endl;
+                        cout << "BOY!, You enter the wrong number, there are ONLY 3 NUMBER HOW DID YOU MESSED UP" << endl;
                         break;
                 }
                 break;
@@ -406,7 +411,7 @@ void handleGeometry() {
                         break;
 
                     default:
-                        cout << "BOY!, You enter the wrong number, there is ONLY 3 NUMBER HOW DID YOU MESSED UP" << endl;
+                        cout << "BOY!, You enter the wrong number, there are ONLY 3 NUMBER HOW DID YOU MESSED UP" << endl;
                         break;
                 }
                 break;
@@ -438,7 +443,7 @@ void handleGeometry() {
                         break;
 
                     default:
-                        cout << "BOY!, You enter the wrong number, there is ONLY 3 NUMBER HOW DID YOU MESSED UP" << endl;
+                        cout << "BOY!, You enter the wrong number, there are ONLY 3 NUMBER HOW DID YOU MESSED UP" << endl;
                         break;
                 }
                 break;
@@ -449,13 +454,13 @@ void handleGeometry() {
                 break;
 
             default:
-                cout << "BOY!, You enter the wrong number, there is ONLY 10 NUMBER HOW DID YOU MESSED UP" << endl;
+                cout << "BOY!, You enter the wrong number, there are ONLY 10 NUMBER HOW DID YOU MESSED UP" << endl;
                 break;
         }
     }
 }
 
-
+// Function to handle Angles option
 void handleAngles(){
     int sides;
     double sumOfInteriorAngles;
@@ -466,8 +471,62 @@ void handleAngles(){
     cout << "Sum of Interior Angles of the polygon: " << sumOfInteriorAngles << " degrees" << endl;
 }
 
+// Function to handle Pythagoras option
+void handlePythagoras() {
+    int option;
+    while(option != 0){
+        cout << "Choose an option:" << endl;
+        cout << "1. Find side C (hypotenuse)" << endl;
+        cout << "2. Find side A or B" << endl;
+        cout << "0.Exit" << endl;
+        cin >> option;
+
+        switch(option) {
+            case 1: {
+                double sideA, sideB, hypotenuse;
+
+                cout << "Enter the length of side A: ";
+                cin >> sideA;
+
+                cout << "Enter the length of side B: ";
+                cin >> sideB;
+
+                // Pythagorean theorem: c^2 = a^2 + b^2
+                hypotenuse = sqrt(sideA * sideA + sideB * sideB);
+
+                cout << "The length of the hypotenuse (side C) is: " << hypotenuse << endl;
+                break;
+            }
+            case 2: {
+                double sideA, sideC, sideB;
+
+                cout << "Enter the length of side A: ";
+                cin >> sideA;
+
+                cout << "Enter the length of the hypotenuse (side C): ";
+                cin >> sideC;
+
+                // Pythagorean theorem: a^2 = c^2 - b^2
+                // Solve for side B
+                sideB = sqrt(sideC * sideC - sideA * sideA);
+
+                cout << "The length of side B is: " << sideB << endl;
+                break;
+            case 0:
+                break;
+            }
+            default:
+                cout << "Invalid option selected" << endl;
+                break;
+        }
+    }
+}
+
+// The main function
 int main(){
     cout << "Welcome to the Petruk Hotline" << endl;
+    cout << "Everything is inside of me" << endl;
+    cout << "So ask me anything" << endl;
     Sleep(1000);  
     int option = -1; // Initialize option with an invalid value
 
@@ -496,13 +555,18 @@ int main(){
                 handleAngles();
                 break;
 
+            case 6:
+                handlePythagoras();
+                break;
+
+
             case 0:
                 cout << "Okay, so we are done, Go home!" << endl;
                 cout << "Exiting program..." << endl;
                 break;
 
             default:
-                cout << "BOY!, You enter the wrong number, there is ONLY A FEW NUMBER HOW DID YOU MESSED UP" << endl;
+                cout << "BOY!, You enter the wrong number, there are ONLY A FEW NUMBER HOW DID YOU MESSED UP" << endl;
                 break;
         }
     }
