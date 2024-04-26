@@ -189,7 +189,11 @@ void handleGeometry() {
                 int triangleOption;
                 double side1, side2, side3, perimeter, area, base, height, s;
                 cout << "Enter the lengths of the three sides of the triangle: ";
-                cin >> side1 >> side2 >> side3;
+                cin >> side1;
+                cout << "Enter another the lengths of the three sides of the triangle: ";
+                cin >> side2;
+                cout << "Enter another the lengths of the three sides of the triangle: ";
+                cin >> side3;               
                 cout << "Enter the base of the triangle: ";
                 cin >> base;
                 cout << "Enter the height of the triangle: ";
@@ -228,9 +232,10 @@ void handleGeometry() {
                 // Rectangle calculations
                 int option;
                 double length, width, perimeter, area;
-                cout << "Enter the length and width of the rectangle: ";
-                cin >> length >> width;
-
+                cout << "Enter the length of the rectangle: ";
+                cin >> length;
+                cout << "Enter the width of the rectangle";
+                cin >> width;
                 cout << "1. Calculate Perimeter\n2. Calculate Area\n0. Back to Menu" << endl;
                 cin >> option;
 
