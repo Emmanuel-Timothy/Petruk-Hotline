@@ -522,6 +522,34 @@ void handlePythagoras() {
     }
 }
 
+// Function to handle Quadratic option
+void handleQuadratic() {
+    double a, b, c;
+    cout << "Enter the coefficients a: ";
+    cin >> a;
+    cout << "Enter the coefficients b: ";
+    cin >> b;
+    cout << "Enter the coefficients c: ";
+    cin >> c;
+
+    double discriminant = b * b - 4 * a * c;
+    if (discriminant > 0) {
+        double root1 = (-b + sqrt(discriminant)) / (2 * a);
+        double root2 = (-b - sqrt(discriminant)) / (2 * a);
+        cout << "Roots of the quadratic equation are: " << root1 << " and " << root2 << endl;
+    } else if (discriminant == 0) {
+        double root = -b / (2 * a);
+        cout << "Root of the quadratic equation is: " << root << endl;
+    } else {
+        cout << "The quadratic equation has complex roots." << endl;
+        // Calculate and display the real and imaginary parts of the roots
+        double realPart = -b / (2 * a);
+        double imaginaryPart = sqrt(-discriminant) / (2 * a);
+        cout << "Roots of the quadratic equation are: " << realPart << " + " << imaginaryPart << "i and " << realPart << " - " << imaginaryPart << "i" << endl;
+    }
+    cout << "The discriminant is " << discriminant << endl;
+}
+
 // The main function
 int main(){
     cout << "Welcome to the Petruk Hotline" << endl;
@@ -559,6 +587,9 @@ int main(){
                 handlePythagoras();
                 break;
 
+            case 7:
+                handleQuadratic();
+                break;
 
             case 0:
                 cout << "Okay, so we are done, Go home!" << endl;
