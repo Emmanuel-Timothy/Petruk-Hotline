@@ -8,7 +8,7 @@ using namespace std;
 void displayWelcomeMessage() {
     cout << "Please select an option" << endl;
     Sleep(1000);
-    cout << "1.Sequence, 2.PEMDAS, 3.Calculator, 4.Geometry, 5.Angles, 6.Pytagoras, 7.Quadratic,0.Exit" << endl;
+    cout << "1.Sequence, 2.PEMDAS, 3.Calculator, 4.Geometry, 5.Angles, 6.Pytagoras, 7.Quadratic, 8.Trigonometry,0.Exit" << endl;
 }
 
 // Function to handle Sequence option
