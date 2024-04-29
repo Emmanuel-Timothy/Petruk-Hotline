@@ -8,7 +8,7 @@ using namespace std;
 void displayWelcomeMessage() {
     cout << "Please select an option" << endl;
     Sleep(1000);
-    cout << "1.Sequence, 2.PEMDAS, 3.Calculator, 4.Geometry, 5.Angles, 6.Pytagoras, 7.Quadratic, 0.Exit" << endl;
+    cout << "1.Sequence, 2.PEMDAS, 3.Calculator, 4.Geometry, 5.Angles, 6.Pytagoras, 7.Quadratic, 8.Weight, 0.Exit" << endl;
 }
 
 // Function to handle Sequence option
@@ -550,6 +550,38 @@ void handleQuadratic() {
     cout << "The discriminant is " << discriminant << endl;
 }
 
+// Function to handle Weight option
+#include <iostream>
+using namespace std;
+
+// Function to handle weight option
+void handleWeight() {
+    cout << "Well, I'm not an expert in this, but because it's math, I can calculate your ideal weight." << endl;
+    double height;
+    double weight;
+
+    cout << "Enter your height in meters: ";
+    cin >> height;
+    cout << "Enter your weight: ";
+    cin >> weight;
+
+    double bmi = weight / (height * height);
+
+    string status;
+    if (bmi < 18.5) {
+        status = "Underweight";
+    } else if (bmi < 25) {
+        status = "Normal weight";
+    } else if (bmi < 30) {
+        status = "Overweight";
+    } else {
+        status = "Obese";
+    }
+
+    cout << "Your BMI is: " << bmi << endl;
+    cout << "You are considered: " << status << endl;
+}
+
 // The main function
 int main(){
     cout << "Welcome to the Petruk Hotline" << endl;
@@ -589,6 +621,10 @@ int main(){
 
             case 7:
                 handleQuadratic();
+                break;
+
+            case 8:
+                handleWeight();
                 break;
 
             case 0:
