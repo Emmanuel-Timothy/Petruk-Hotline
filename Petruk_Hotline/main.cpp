@@ -21,6 +21,12 @@ void handleSequence() {
         cin >> sequence;
 
         if(sequence == 1){
+            cout << "What is sequence!?" << endl;
+            Sleep(2000)
+            cout << "I will chop your head off yo" << endl;
+            sleep(2500)
+            cout << "fine I will help you" << endl;
+            Sleep(1000)
             cout << "A sequence is basically an ordered list with a certain rule!" << endl;
         }
         else if(sequence == 2){
@@ -550,21 +556,16 @@ void handleQuadratic() {
     cout << "The discriminant is " << discriminant << endl;
 }
 
-// Function to handle Weight option
-#include <iostream>
-using namespace std;
-
 // Function to handle weight option
 void handleWeight() {
     cout << "Well, I'm not an expert in this, but because it's math, I can calculate your ideal weight." << endl;
     double height;
     double weight;
 
-    cout << "Enter your height in meters: ";
+    cout << "Enter your height in meter: ";
     cin >> height;
-    cout << "Enter your weight: ";
+    cout << "Enter your weight in kilogram: ";
     cin >> weight;
-
     double bmi = weight / (height * height);
 
     string status;
