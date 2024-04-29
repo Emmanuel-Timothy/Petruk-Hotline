@@ -22,11 +22,11 @@ void handleSequence() {
 
         if(sequence == 1){
             cout << "What is sequence!?" << endl;
-            Sleep(2000)
+            Sleep(2000);
             cout << "I will chop your head off yo" << endl;
-            sleep(2500)
+            Sleep(2500);
             cout << "fine I will help you" << endl;
-            Sleep(1000)
+            Sleep(1000);
             cout << "A sequence is basically an ordered list with a certain rule!" << endl;
         }
         else if(sequence == 2){
