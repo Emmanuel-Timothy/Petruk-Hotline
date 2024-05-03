@@ -8,7 +8,7 @@ using namespace std;
 void displayWelcomeMessage() {
     cout << "Please select an option" << endl;
     Sleep(1000);
-    cout << "1.Sequence, 2.PEMDAS, 3.Calculator, 4.Geometry, 5.Angles, 6.Trigonometry, 7.Quadratic, 8.Weight, 0.Exit" << endl;
+    cout << "1.Sequence, 2.PEMDAS, 3.Calculator, 4.Geometry, 5.Angles, 6.Trigonometry, 7.Quadratic, 8.Weight, 9.Probability , 0.Exit" << endl;
 }
 
 // Function to handle Sequence option
@@ -470,6 +470,91 @@ void handleWeight() {
     cout << "You are considered: " << status << endl;
 }
 
+// Function to handle Probability option
+void handleProbability() {
+    int option;
+    while (option != 0) {
+        cout << "Choose a probability calculation:" << endl;
+        cout << "1. Permutation (P(n, r))" << endl;
+        cout << "2. Combination (C(n, r))" << endl;
+        cout << "3. Cyclic Permutations (siklis)" << endl;
+        cout << "4. Definition" << endl;
+        cout << "0. Back to Main Menu" << endl;
+        cin >> option;
+
+        switch(option) {
+            case 1: {
+                int n, r;
+                cout << "Enter the total number of items (n): ";
+                cin >> n;
+                cout << "Enter the number of items to choose (r): ";
+                cin >> r;
+
+                if (n < r) {
+                    cout << "Invalid input: n should be greater than or equal to r." << endl;
+                } else {
+                    // Calculate permutation: P(n, r) = n! / (n - r)!
+                    long long permutation = 1;
+                    for (int i = 0; i < r; ++i) {
+                        permutation *= (n - i);
+                    }
+                    cout << "Permutation (P(" << n << ", " << r << ")) = " << permutation << endl;
+                }
+                break;
+            }
+            case 2: {
+                int n, r;
+                cout << "Enter the total number of items (n): ";
+                cin >> n;
+                cout << "Enter the number of items to choose (r): ";
+                cin >> r;
+
+                if (n < r) {
+                    cout << "Invalid input: n should be greater than or equal to r." << endl;
+                } else {
+                    // Calculate combination: C(n, r) = n! / (r! * (n - r)!)
+                    long long combination = 1;
+                    for (int i = 1; i <= r; ++i) {
+                        combination *= (n - i + 1);
+                        combination /= i;
+                    }
+                    cout << "Combination (C(" << n << ", " << r << ")) = " << combination << endl;
+                }
+                break;
+            }
+            case 3: {
+                int n;
+                cout << "Enter the number of items (n): ";
+                cin >> n;
+
+                // Calculate cyclic permutations: (n - 1)!
+                long long cyclicPermutations = 1;
+                for (int i = 1; i <= n - 1; ++i) {
+                    cyclicPermutations *= i;
+                }
+                cout << "Cyclic Permutations (siklis) = " << cyclicPermutations << endl;
+                break;
+            }
+            case 4: {
+                cout << "I WILL FINISH YOU!" << endl;
+                Sleep(2500);
+                cout << "Just kidding" << endl;
+                Sleep(1000);
+                cout << "Commutative Property: It means you can add or multiply numbers in any order without changing the result." << endl;
+                Sleep(1000);
+                cout << "Cyclic Property: In a group, there's an element where repeatedly applying an operation generates all other elements." << endl;
+                Sleep(1000);
+                cout << "Permutation: It's the arrangement of objects in a specific order, commonly used in combinatorics and algorithms." << endl;
+                Sleep(1000);
+            }
+            case 0:
+                break;
+            default:
+                cout << "Invalid option selected." << endl;
+                break;
+        }
+    }
+}
 
 // The main function
 int main(){
@@ -514,6 +599,10 @@ int main(){
 
             case 8:
                 handleWeight();
+                break;
+
+            case 9:
+                handleProbability();
                 break;
 
             case 0:

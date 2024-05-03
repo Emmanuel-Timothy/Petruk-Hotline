@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/Koding/Petruk-Hotline/Petruk_Hotline",
-      "program": "d:/Koding/Petruk-Hotline/Petruk_Hotline/build/Debug/outDebug",
+      "cwd": "d:/Koding/GITFORK/Petruk-Hotline/Petruk_Hotline",
+      "program": "d:/Koding/GITFORK/Petruk-Hotline/Petruk_Hotline/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
