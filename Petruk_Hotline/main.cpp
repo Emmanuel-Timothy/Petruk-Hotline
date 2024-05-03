@@ -8,7 +8,7 @@ using namespace std;
 void displayWelcomeMessage() {
     cout << "Please select an option" << endl;
     Sleep(1000);
-    cout << "1.Sequence, 2.PEMDAS, 3.Calculator, 4.Geometry, 5.Angles, 6.Pytagoras, 7.Quadratic, 8.Trigonometry,0.Exit" << endl;
+    cout << "1.Sequence, 2.PEMDAS, 3.Calculator, 4.Geometry, 5.Angles, 6.Trigonometry, 7.Quadratic, 8.Weight, 0.Exit" << endl;
 }
 
 // Function to handle Sequence option
@@ -21,6 +21,12 @@ void handleSequence() {
         cin >> sequence;
 
         if(sequence == 1){
+            cout << "What is sequence!?" << endl;
+            Sleep(2000);
+            cout << "I will chop your head off yo!" << endl;
+            Sleep(2500);
+            cout << "fine I will help you" << endl;
+            Sleep(1000);
             cout << "A sequence is basically an ordered list with a certain rule!" << endl;
         }
         else if(sequence == 2){
@@ -148,7 +154,7 @@ void handleGeometry() {
     while (!exitGeometry) {
         cout << "What do you want me to help you with in Geometry?" << endl;
         Sleep(1500);  
-        cout << "1. Circle, 2. Triangle, 3. Rectangle, 4. Pentagon, 5. Hexagon, 6. Heptagon, 7. Octagon, 8. Nonagon, 9. Decagon, 0. Back to Main Menu" << endl;
+        cout << "1. Circle, 2. Triangle, 3. Rectangle, 0. Back to Main Menu" << endl;
         cin >> geometry;
 
         switch(geometry) {
@@ -260,195 +266,6 @@ void handleGeometry() {
                 break;
             }
 
-            case 4: {
-                // Pentagon calculations
-                int option, sides = 5;
-                double sideLength, perimeter, area;
-                cout << "Enter the length of each side of the pentagon: ";
-                cin >> sideLength;
-
-                cout << "1. Calculate Perimeter\n2. Calculate Area\n0. Back to Menu" << endl;
-                cin >> option;
-
-                switch(option) {
-                    case 1:
-                        perimeter = sides * sideLength;
-                        cout << "Perimeter of the pentagon: " << perimeter << endl;
-                        break;
-                    
-                    case 2:
-                        area = 0.25 * sqrt(5 * (5 + 2 * sqrt(5))) * sideLength * sideLength; // Regular pentagon area formula
-                        cout << "Area of the pentagon: " << area << endl;
-                        break;
-
-                    case 0:
-                        break;
-
-                    default:
-                        cout << "BOY!, You enter the wrong number, there areee ONLY 3 NUMBER HOW DID YOU MESSED UP" << endl;
-                        break;
-                }
-                break;
-            }
-
-            case 5: {
-                // Hexagon calculations
-                int option, sides = 6;
-                double sideLength, perimeter, area;
-                cout << "Enter the length of each side of the hexagon: ";
-                cin >> sideLength;
-
-                cout << "1. Calculate Perimeter\n2. Calculate Area\n0. Back to Menu" << endl;
-                cin >> option;
-
-                switch(option) {
-                    case 1:
-                        perimeter = sides * sideLength;
-                        cout << "Perimeter of the hexagon: " << perimeter << endl;
-                        break;
-                    
-                    case 2:
-                        area = 3 * sqrt(3) / 2 * sideLength * sideLength; // Regular hexagon area formula
-                        cout << "Area of the hexagon: " << area << endl;
-                        break;
-
-                    case 0:
-                        break;
-
-                    default:
-                        cout << "BOY!, You enter the wrong number, there are ONLY 3 NUMBER HOW DID YOU MESSED UP" << endl;
-                        break;
-                }
-                break;
-            }
-
-            case 6: {
-                // Heptagon calculations
-                int option, sides = 7;
-                double sideLength, perimeter, area;
-                cout << "Enter the length of each side of the heptagon: ";
-                cin >> sideLength;
-
-                cout << "1. Calculate Perimeter\n2. Calculate Area\n0. Back to Menu" << endl;
-                cin >> option;
-
-                switch(option) {
-                    case 1:
-                        perimeter = sides * sideLength;
-                        cout << "Perimeter of the heptagon: " << perimeter << endl;
-                        break;
-                    
-                    case 2:
-                        // Regular heptagon area formula is quite complex, using approximation for simplicity
-                        area = 3.63391 * sideLength * sideLength; 
-                        cout << "Area of the heptagon: " << area << endl;
-                        break;
-
-                    case 0:
-                        break;
-
-                    default:
-                        cout << "BOY!, You enter the wrong number, there are ONLY 3 NUMBER HOW DID YOU MESSED UP" << endl;
-                        break;
-                }
-                break;
-            }
-
-            case 7: {
-                // Octagon calculations
-                int option, sides = 8;
-                double sideLength, perimeter, area;
-                cout << "Enter the length of each side of the octagon: ";
-                cin >> sideLength;
-
-                cout << "1. Calculate Perimeter\n2. Calculate Area\n0. Back to Menu" << endl;
-                cin >> option;
-
-                switch(option) {
-                    case 1:
-                        perimeter = sides * sideLength;
-                        cout << "Perimeter of the octagon: " << perimeter << endl;
-                        break;
-                    
-                    case 2:
-                        area = 2 * (1 + sqrt(2)) * sideLength * sideLength; // Regular octagon area formula
-                        cout << "Area of the octagon: " << area << endl;
-                        break;
-
-                    case 0:
-                        break;
-
-                    default:
-                        cout << "BOY!, You enter the wrong number, there are ONLY 3 NUMBER HOW DID YOU MESSED UP" << endl;
-                        break;
-                }
-                break;
-            }
-
-            case 8: {
-                // Nonagon calculations
-                int option, sides = 9;
-                double sideLength, perimeter, area;
-                cout << "Enter the length of each side of the nonagon: ";
-                cin >> sideLength;
-
-                cout << "1. Calculate Perimeter\n2. Calculate Area\n0. Back to Menu" << endl;
-                cin >> option;
-
-                switch(option) {
-                    case 1:
-                        perimeter = sides * sideLength;
-                        cout << "Perimeter of the nonagon: " << perimeter << endl;
-                        break;
-                    
-                    case 2:
-                        // Regular nonagon area formula is quite complex, using approximation for simplicity
-                        area = 6.18182 * sideLength * sideLength; 
-                        cout << "Area of the nonagon: " << area << endl;
-                        break;
-
-                    case 0:
-                        break;
-
-                    default:
-                        cout << "BOY!, You enter the wrong number, there are ONLY 3 NUMBER HOW DID YOU MESSED UP" << endl;
-                        break;
-                }
-                break;
-            }
-
-            case 9: {
-                // Decagon calculations
-                int option, sides = 10;
-                double sideLength, perimeter, area;
-                cout << "Enter the length of each side of the decagon: ";
-                cin >> sideLength;
-
-                cout << "1. Calculate Perimeter\n2. Calculate Area\n0. Back to Menu" << endl;
-                cin >> option;
-
-                switch(option) {
-                    case 1:
-                        perimeter = sides * sideLength;
-                        cout << "Perimeter of the decagon: " << perimeter << endl;
-                        break;
-                    
-                    case 2:
-                        // Regular decagon area formula is quite complex, using approximation for simplicity
-                        area = 2.5 * (1 + sqrt(5)) * sideLength * sideLength; 
-                        cout << "Area of the decagon: " << area << endl;
-                        break;
-
-                    case 0:
-                        break;
-
-                    default:
-                        cout << "BOY!, You enter the wrong number, there are ONLY 3 NUMBER HOW DID YOU MESSED UP" << endl;
-                        break;
-                }
-                break;
-            }
-
             case 0:
                 exitGeometry = true;  // Set the flag to true to exit the geometry menu
                 break;
@@ -472,13 +289,20 @@ void handleAngles(){
 }
 
 // Function to handle Pythagoras option
-void handlePythagoras() {
-    int option;
+void handleTrigonometry() {
+    int option = -1;
     while(option != 0){
         cout << "Choose an option:" << endl;
         cout << "1. Find side C (hypotenuse)" << endl;
         cout << "2. Find side A or B" << endl;
-        cout << "0.Exit" << endl;
+        cout << "3. Calculate sine" << endl;
+        cout << "4. Calculate cosine" << endl;
+        cout << "5. Calculate tangent" << endl;
+        cout << "6. Calculate reciprocal of sine" << endl;
+        cout << "7. Calculate reciprocal of cosine" << endl;
+        cout << "8. Calculate reciprocal of tangent" << endl;
+        cout << "9. Calculate using lengths" << endl; // New option
+        cout << "0. Exit" << endl;
         cin >> option;
 
         switch(option) {
@@ -506,21 +330,90 @@ void handlePythagoras() {
                 cout << "Enter the length of the hypotenuse (side C): ";
                 cin >> sideC;
 
-                // Pythagorean theorem: a^2 = c^2 - b^2
+                // Pythagorean theorem: b^2 = c^2 - a^2
                 // Solve for side B
                 sideB = sqrt(sideC * sideC - sideA * sideA);
 
                 cout << "The length of side B is: " << sideB << endl;
                 break;
-            case 0:
+            }
+            case 3: {
+                double angle;
+                cout << "Enter the angle in degrees: ";
+                cin >> angle;
+                double sine = sin(angle * M_PI / 180); // Convert degrees to radians
+                cout << "The sine of " << angle << " degrees is: " << sine << endl;
                 break;
             }
+            case 4: {
+                double angle;
+                cout << "Enter the angle in degrees: ";
+                cin >> angle;
+                double cosine = cos(angle * M_PI / 180); // Convert degrees to radians
+                cout << "The cosine of " << angle << " degrees is: " << cosine << endl;
+                break;
+            }
+            case 5: {
+                double angle;
+                cout << "Enter the angle in degrees: ";
+                cin >> angle;
+                double tangent = tan(angle * M_PI / 180); // Convert degrees to radians
+                cout << "The tangent of " << angle << " degrees is: " << tangent << endl;
+                break;
+            }
+            case 6: {
+                double angle;
+                cout << "Enter the angle in degrees: ";
+                cin >> angle;
+                double sine = sin(angle * M_PI / 180); // Convert degrees to radians
+                double reciprocal_sine = 1 / sine;
+                cout << "The reciprocal of sine(" << angle << " degrees) is: " << reciprocal_sine << endl;
+                break;
+            }
+            case 7: {
+                double angle;
+                cout << "Enter the angle in degrees: ";
+                cin >> angle;
+                double cosine = cos(angle * M_PI / 180); // Convert degrees to radians
+                double reciprocal_cosine = 1 / cosine;
+                cout << "The reciprocal of cosine(" << angle << " degrees) is: " << reciprocal_cosine << endl;
+                break;
+            }
+            case 8: {
+                double angle;
+                cout << "Enter the angle in degrees: ";
+                cin >> angle;
+                double tangent = tan(angle * M_PI / 180); // Convert degrees to radians
+                double reciprocal_tangent = 1 / tangent;
+                cout << "The reciprocal of tangent(" << angle << " degrees) is: " << reciprocal_tangent << endl;
+                break;
+            }
+            case 9: {
+                double sideA, sideB;
+
+                cout << "Enter the length of side A: ";
+                cin >> sideA;
+
+                cout << "Enter the length of side B: ";
+                cin >> sideB;
+
+                double angleA = asin(sideA / sideB) * 180 / M_PI; // Calculate angle A in degrees
+                double angleB = asin(sideB / sideA) * 180 / M_PI; // Calculate angle B in degrees
+
+                cout << "Angle A: " << angleA << " degrees" << endl;
+                cout << "Angle B: " << angleB << " degrees" << endl;
+                break;
+            }
+            case 0:
+                break;
             default:
                 cout << "Invalid option selected" << endl;
                 break;
         }
     }
 }
+
+
 
 // Function to handle Quadratic option
 void handleQuadratic() {
@@ -549,6 +442,34 @@ void handleQuadratic() {
     }
     cout << "The discriminant is " << discriminant << endl;
 }
+
+// Function to handle weight option
+void handleWeight() {
+    cout << "Well, I'm not an expert in this, but because it's math, I can calculate your ideal weight." << endl;
+    double height;
+    double weight;
+
+    cout << "Enter your height in meter: ";
+    cin >> height;
+    cout << "Enter your weight in kilogram: ";
+    cin >> weight;
+    double bmi = weight / (height * height);
+
+    string status;
+    if (bmi < 18.5) {
+        status = "Underweight";
+    } else if (bmi < 25) {
+        status = "Normal weight";
+    } else if (bmi < 30) {
+        status = "Overweight";
+    } else {
+        status = "Obese";
+    }
+
+    cout << "Your BMI is: " << bmi << endl;
+    cout << "You are considered: " << status << endl;
+}
+
 
 // The main function
 int main(){
@@ -584,11 +505,15 @@ int main(){
                 break;
 
             case 6:
-                handlePythagoras();
+                handleTrigonometry();
                 break;
 
             case 7:
                 handleQuadratic();
+                break;
+
+            case 8:
+                handleWeight();
                 break;
 
             case 0:
