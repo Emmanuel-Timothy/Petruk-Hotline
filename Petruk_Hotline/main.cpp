@@ -95,56 +95,105 @@ void handlePEMDAS() {
     }
 }
 
+// Function to handle weight option
+void handleWeight() {
+    cout << "Well, I'm not an expert in this, but because it's math, I can calculate your ideal weight." << endl;
+    cout << "BMI under 18.5 is underweight, 18.5-25 is normal, 25-30 is overweight, the rest is obese" << endl;
+    double height;
+    double weight;
+
+    cout << "Enter your height in meter: ";
+    cin >> height;
+    cout << "Enter your weight in kilogram: ";
+    cin >> weight;
+    double bmi = weight / (height * height);
+
+    string status;
+    if (bmi < 18.5) {
+        status = "Underweight";
+    } else if (bmi < 25) {
+        status = "Normal weight";
+    } else if (bmi < 30) {
+        status = "Overweight";
+    } else {
+        status = "Obese";
+    }
+
+    cout << "Your BMI is: " << bmi << endl;
+    cout << "You are considered: " << status << endl;
+}
+
 // Function to handle Calculator option
 void handleCalculator() {
     int calc;
     while (calc != 0) {
-        double num1,num2;
-        char op;
-        cout << "If you are in africa, you will be standing outside for using calculator yo!" << endl;
-        Sleep(2500);
-        cout << "Fine, I will allow you!" << endl;
-
-        cout << "Enter first number: ";
-        cin >> num1;
-
-        cout << "Enter operator(+,-,*,/): ";
-        cin >> op;
-
-        cout << "Enter second number: ";
-        cin >> num2;
-
-        double result;
-        switch(op) {
-            case '+':
-                result = num1 + num2;
-                cout << result;
-                break;
-            
-            case '-':
-                result = num1 - num2;
-                cout << result;
-                break;
-
-            case '*':
-                result = num1 * num2;
-                cout << result;
-                break;
-
-            case '/':
-                result = num1 / num2;
-                cout << result;
-                break;
-
-            default:
-                cout << "This boy, What are you doing" << endl;
-                return; // Exiting program due to invalid operator
-        }
-        cout << endl;
-        cout << "0.Back to Main Menu" << endl;
+        cout << "Choose an option:" << endl;
+        cout << "1. Arithmetic Calculation" << endl;
+        cout << "2. Weight Calculation" << endl;
+        cout << "0. Back to Main Menu" << endl;
         cin >> calc;
+
+        switch(calc) {
+            case 1: {
+                double num1, num2;
+                char op;
+                cout << "Enter first number: ";
+                cin >> num1;
+
+                cout << "Enter operator(+,-,*,/): ";
+                cin >> op;
+
+                cout << "Enter second number: ";
+                cin >> num2;
+
+                double result;
+                switch(op) {
+                    case '+':
+                        result = num1 + num2;
+                        cout << result;
+                        break;
+
+                    case '-':
+                        result = num1 - num2;
+                        cout << result;
+                        break;
+
+                    case '*':
+                        result = num1 * num2;
+                        cout << result;
+                        break;
+
+                    case '/':
+                        if (num2 != 0) {
+                            result = num1 / num2;
+                            cout << result;
+                        } else {
+                            cout << "Division by zero is not allowed";
+                        }
+                        break;
+
+                    default:
+                        cout << "Invalid operator";
+                        break;
+                }
+                cout << endl;
+                break;
+            }
+            case 2: {
+                handleWeight(); // Call the handleWeight function
+                break;
+            }
+            case 0:
+                cout << "Returning to Main Menu..." << endl;
+                break;
+            default:
+                cout << "Invalid option" << endl;
+                break;
+        }
     }
 }
+
+
 
 // Function to handle Geometry option
 void handleGeometry() {
@@ -443,33 +492,6 @@ void handleQuadratic() {
     cout << "The discriminant is " << discriminant << endl;
 }
 
-// Function to handle weight option
-void handleWeight() {
-    cout << "Well, I'm not an expert in this, but because it's math, I can calculate your ideal weight." << endl;
-    double height;
-    double weight;
-
-    cout << "Enter your height in meter: ";
-    cin >> height;
-    cout << "Enter your weight in kilogram: ";
-    cin >> weight;
-    double bmi = weight / (height * height);
-
-    string status;
-    if (bmi < 18.5) {
-        status = "Underweight";
-    } else if (bmi < 25) {
-        status = "Normal weight";
-    } else if (bmi < 30) {
-        status = "Overweight";
-    } else {
-        status = "Obese";
-    }
-
-    cout << "Your BMI is: " << bmi << endl;
-    cout << "You are considered: " << status << endl;
-}
-
 // Function to handle Probability option
 void handleProbability() {
     int option;
@@ -598,7 +620,7 @@ int main(){
                 break;
 
             case 8:
-                handleWeight();
+
                 break;
 
             case 9:
