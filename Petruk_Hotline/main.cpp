@@ -1,6 +1,10 @@
 #include<iostream>
 #include<Windows.h>
 #include<cmath>
+#include<algorithm>
+#include<vector>
+#include<numeric>
+#include<unordered_map>
 
 using namespace std;
 
@@ -8,12 +12,12 @@ using namespace std;
 void displayWelcomeMessage() {
     cout << "Please select an option" << endl;
     Sleep(1000);
-    cout << "1.Sequence, 2.PEMDAS, 3.Calculator, 4.Geometry, 5.Angles, 6.Trigonometry, 7.Quadratic, 8.Weight, 9.Probability , 0.Exit" << endl;
+    cout << "1.Sequence, 2.PEMDAS, 3.Calculator, 4.Geometry, 5.Angles, 6.Trigonometry, 7.Quadratic, 8.Statistic, 9.Probability , 0.Exit" << endl;
 }
 
 // Function to handle Sequence option
 void handleSequence() {
-    int sequence;
+    int sequence = -1;
     while (sequence != 0) {
         cout << "What do you want me to help you with in Sequence?" << endl;
         Sleep(1500);  
@@ -193,8 +197,6 @@ void handleCalculator() {
     }
 }
 
-
-
 // Function to handle Geometry option
 void handleGeometry() {
     int geometry;
@@ -202,125 +204,194 @@ void handleGeometry() {
 
     while (!exitGeometry) {
         cout << "What do you want me to help you with in Geometry?" << endl;
-        Sleep(1500);  
-        cout << "1. Circle, 2. Triangle, 3. Rectangle, 0. Back to Main Menu" << endl;
+        cout << "1. Circle, 2. Triangle, 3. Rectangle, 4. Kite, 5. Parallelogram, 6. Trapezium, 7. Prism, 8. Pyramid, 9. Ball, 0. Back to Main Menu" << endl;
         cin >> geometry;
 
         switch(geometry) {
             case 1: {
                 // Circle calculations
-                int option;
                 double radius, perimeter, area;
                 const double pi = 3.14159;
                 cout << "Enter the radius of the circle: ";
                 cin >> radius;
 
-                cout << "1. Calculate Perimeter\n2. Calculate Area\n0. Back to Menu" << endl;
-                cin >> option;
+                perimeter = 2 * pi * radius;
+                cout << "Perimeter of the circle: " << perimeter << endl;
 
-                switch(option) {
-                    case 1:
-                        perimeter = 2 * pi * radius;
-                        cout << "Perimeter of the circle: " << perimeter << endl;
-                        break;
-                    
-                    case 2:
-                        area = pi * radius * radius;
-                        cout << "Area of the circle: " << area << endl;
-                        break;
-
-                    case 0:
-                        break;
-
-                    default:
-                        cout << "BOY!, You enter the wrong number, there are ONLY 3 NUMBER HOW DID YOU MESSED UP" << endl;
-                        break;
-                }
+                area = pi * radius * radius;
+                cout << "Area of the circle: " << area << endl;
                 break;
             }
-
             case 2: {
                 // Triangle calculations
-                int triangleOption;
-                double side1, side2, side3, perimeter, area, base, height, s;
+                double side1, side2, side3, perimeter, area;
                 cout << "Enter the lengths of the three sides of the triangle: ";
-                cin >> side1;
-                cout << "Enter another the lengths of the three sides of the triangle: ";
-                cin >> side2;
-                cout << "Enter another the lengths of the three sides of the triangle: ";
-                cin >> side3;               
-                cout << "Enter the base of the triangle: ";
-                cin >> base;
-                cout << "Enter the height of the triangle: ";
-                cin >> height;
-                cout << "1. Calculate Perimeter\n2. Calculate Area(without height)\n3. Calculate Area\n0. Back to Menu" << endl;
-                cin >> triangleOption;
+                cin >> side1 >> side2 >> side3;
 
-                switch(triangleOption) {
-                    case 1:
-                        perimeter = side1 + side2 + side3;
-                        cout << "Perimeter of the triangle: " << perimeter << endl;
-                        break;
-                    case 2:
-                        perimeter = side1 + side2 + side3; // Calculate perimeter first
-                        s = perimeter / 2;
-                        area = sqrt(s * (s - side1) * (s - side2) * (s - side3)); // Heron's formula
-                        cout << "Area of the triangle: " << area << endl;
-                        break;
-                    case 3:
-                        area = (base * height) / 2;
-                        cout << "Area of the triangle: " << area << endl;
-                    break;
+                perimeter = side1 + side2 + side3;
+                cout << "Perimeter of the triangle: " << perimeter << endl;
 
-                    case 0:
-                        break;
-
-                    default:
-                        cout << "BOY!, You enter the wrong number, there are ONLY 4 NUMBER HOW DID YOU MESSED UP" << endl;
-                        break;
-
-                }
+                // Heron's formula for area
+                double s = perimeter / 2;
+                area = sqrt(s * (s - side1) * (s - side2) * (s - side3));
+                cout << "Area of the triangle: " << area << endl;
                 break;
             }
-
             case 3: {
                 // Rectangle calculations
-                int option;
                 double length, width, perimeter, area;
                 cout << "Enter the length of the rectangle: ";
                 cin >> length;
                 cout << "Enter the width of the rectangle: ";
                 cin >> width;
-                cout << "1. Calculate Perimeter\n2. Calculate Area\n0. Back to Menu" << endl;
-                cin >> option;
 
-                switch(option) {
-                    case 1:
-                        perimeter = 2 * (length + width);
-                        cout << "Perimeter of the rectangle: " << perimeter << endl;
-                        break;
-                    
-                    case 2:
-                        area = length * width;
-                        cout << "Area of the rectangle: " << area << endl;
-                        break;
+                perimeter = 2 * (length + width);
+                cout << "Perimeter of the rectangle: " << perimeter << endl;
 
-                    case 0:
-                        break;
+                area = length * width;
+                cout << "Area of the rectangle: " << area << endl;
+                break;
+            }
+            case 4: {
+                // Kite calculations
+                // Implement calculations for kite
+                cout << "Kite calculations are not implemented yet." << endl;
+                break;
+            }
+            case 5: {
+                // Parallelogram calculations
+                // Implement calculations for parallelogram
+                cout << "Parallelogram calculations are not implemented yet." << endl;
+                break;
+            }
+            case 6: {
+                // Trapezium calculations
+                // Implement calculations for trapezium
+                cout << "Trapezium calculations are not implemented yet." << endl;
+                break;
+            }
+            case 7: {
+                // Prism calculations
+                int prismType;
+                cout << "Select prism type: 1. Cylinder, 2. Square Prism, 3. Triangular Prism: ";
+                cin >> prismType;
 
+                switch (prismType) {
+                    case 1: {
+                        // Cylinder calculations
+                        double radius, height, surfaceArea, volume;
+                        const double pi = 3.14159;
+                        cout << "Enter the radius of the cylinder: ";
+                        cin >> radius;
+                        cout << "Enter the height of the cylinder: ";
+                        cin >> height;
+
+                        surfaceArea = 2 * pi * radius * (radius + height);
+                        cout << "Surface area of the cylinder: " << surfaceArea << endl;
+
+                        volume = pi * radius * radius * height;
+                        cout << "Volume of the cylinder: " << volume << endl;
+                        break;
+                    }
+                    case 2: {
+                        // Square prism calculations
+                        double sideLength, height, surfaceArea, volume;
+                        cout << "Enter the side length of the square prism: ";
+                        cin >> sideLength;
+                        cout << "Enter the height of the square prism: ";
+                        cin >> height;
+
+                        surfaceArea = 2 * (sideLength * sideLength) + 4 * sideLength * height;
+                        cout << "Surface area of the square prism: " << surfaceArea << endl;
+
+                        volume = sideLength * sideLength * height;
+                        cout << "Volume of the square prism: " << volume << endl;
+                        break;
+                    }
+                    case 3: {
+                        // Triangular prism calculations
+                        double base, height, surfaceArea, volume;
+                        cout << "Enter the base length of the triangular prism: ";
+                        cin >> base;
+                        cout << "Enter the height of the triangular prism: ";
+                        cin >> height;
+
+                        surfaceArea = base * base * sqrt(3) + 3 * base * height;
+                        cout << "Surface area of the triangular prism: " << surfaceArea << endl;
+
+                        volume = (base * base * height) / 2;
+                        cout << "Volume of the triangular prism: " << volume << endl;
+                        break;
+                    }
                     default:
-                        cout << "BOY!, You enter the wrong number, there are ONLY 3 NUMBER HOW DID YOU MESSED UP" << endl;
+                        cout << "Invalid prism type." << endl;
                         break;
                 }
                 break;
             }
+            case 8: {
+                // Pyramid calculations
+                int pyramidType;
+                cout << "Select pyramid type: 1. Cone, 2. Square Pyramid: ";
+                cin >> pyramidType;
 
+                switch (pyramidType) {
+                    case 1: {
+                        // Cone calculations
+                        double radius, height, surfaceArea, volume;
+                        const double pi = 3.14159;
+                        cout << "Enter the radius of the cone: ";
+                        cin >> radius;
+                        cout << "Enter the height of the cone: ";
+                        cin >> height;
+
+                        surfaceArea = pi * radius * (radius + sqrt(height * height + radius * radius));
+                        cout << "Surface area of the cone: " << surfaceArea << endl;
+
+                        volume = (pi * radius * radius * height) / 3;
+                        cout << "Volume of the cone: " << volume << endl;
+                        break;
+                    }
+                    case 2: {
+                        // Square pyramid calculations
+                        double baseLength, height, surfaceArea, volume;
+                        cout << "Enter the base length of the square pyramid: ";
+                        cin >> baseLength;
+                        cout << "Enter the height of the square pyramid: ";
+                        cin >> height;
+
+                        surfaceArea = baseLength * baseLength + 2 * baseLength * sqrt((baseLength / 2) * (baseLength / 2) + height * height);
+                        cout << "Surface area of the square pyramid: " << surfaceArea << endl;
+
+                        volume = (baseLength * baseLength * height) / 3;
+                        cout << "Volume of the square pyramid: " << volume << endl;
+                        break;
+                    }
+                    default:
+                        cout << "Invalid pyramid type." << endl;
+                        break;
+                }
+                break;
+            }
+            case 9: {
+                // Ball calculations
+                double radius, surfaceArea, volume;
+                const double pi = 3.14159;
+                cout << "Enter the radius of the ball: ";
+                cin >> radius;
+
+                surfaceArea = 4 * pi * radius * radius;
+                cout << "Surface area of the ball: " << surfaceArea << endl;
+
+                volume = (4.0 / 3.0) * pi * radius * radius * radius;
+                cout << "Volume of the ball: " << volume << endl;
+                break;
+            }
             case 0:
                 exitGeometry = true;  // Set the flag to true to exit the geometry menu
                 break;
-
             default:
-                cout << "BOY!, You enter the wrong number, there are ONLY 10 NUMBER HOW DID YOU MESSED UP" << endl;
+                cout << "Invalid option selected." << endl;
                 break;
         }
     }
@@ -462,8 +533,6 @@ void handleTrigonometry() {
     }
 }
 
-
-
 // Function to handle Quadratic option
 void handleQuadratic() {
     double a, b, c;
@@ -578,6 +647,105 @@ void handleProbability() {
     }
 }
 
+// Function to handle statistics calculations (mean, median, mode)
+void handleStatistics() {
+    int option = -1;
+    while (option != 0) {
+        cout << "Choose a statistical calculation:" << endl;
+        cout << "1. Mean" << endl;
+        cout << "2. Median" << endl;
+        cout << "3. Mode" << endl; // Changed from "Average" to "Mode"
+        cout << "0. Back to Main Menu" << endl;
+        cin >> option;
+
+        switch(option) {
+            case 1: {
+                // Mean calculation
+                int n;
+                cout << "Enter the number of elements: ";
+                cin >> n;
+                
+                vector<int> nums(n);
+                cout << "Enter " << n << " numbers: "<< endl;
+                for (int i = 0; i < n; ++i) {
+                    cin >> nums[i];
+                }
+
+                double mean = accumulate(nums.begin(), nums.end(), 0) / static_cast<double>(n);
+                cout << "Mean: " << mean << endl;
+                break;
+            }
+            case 2: {
+                // Median calculation
+                int n;
+                cout << "Enter the number of elements: ";
+                cin >> n;
+                
+                vector<int> nums(n);
+                cout << "Enter " << n << " numbers: "<< endl;
+                for (int i = 0; i < n; ++i) {
+                    cin >> nums[i];
+                }
+
+                sort(nums.begin(), nums.end());
+                double median;
+                if (n % 2 == 0) {
+                    median = (nums[n / 2 - 1] + nums[n / 2]) / 2.0;
+                } else {
+                    median = nums[n / 2];
+                }
+                cout << "Median: " << median << endl;
+                break;
+            }
+            case 3: {
+                // Mode calculation
+                int n;
+                cout << "Enter the number of elements: ";
+                cin >> n;
+                
+                vector<int> nums(n);
+                cout << "Enter " << n << " numbers: "<< endl;
+                for (int i = 0; i < n; ++i) {
+                    cin >> nums[i];
+                }
+
+                unordered_map<int, int> frequencyMap;
+                for (int num : nums) {
+                    frequencyMap[num]++;
+                }
+
+                int maxFrequency = 0;
+                vector<int> modes;
+                for (auto& pair : frequencyMap) {
+                    if (pair.second > maxFrequency) {
+                        maxFrequency = pair.second;
+                        modes = {pair.first};
+                    } else if (pair.second == maxFrequency) {
+                        modes.push_back(pair.first);
+                    }
+                }
+
+                if (modes.size() == 1) {
+                    cout << "Mode: " << modes[0] << endl;
+                } else {
+                    cout << "Modes:";
+                    for (int mode : modes) {
+                        cout << " " << mode;
+                    }
+                    cout << endl;
+                }
+                break;
+            }
+            case 0:
+                cout << "Returning to Main Menu..." << endl;
+                break;
+            default:
+                cout << "Invalid option" << endl;
+                break;
+        }
+    }
+}
+
 // The main function
 int main(){
     cout << "Welcome to the Petruk Hotline" << endl;
@@ -620,7 +788,7 @@ int main(){
                 break;
 
             case 8:
-
+                handleStatistics();
                 break;
 
             case 9:
