@@ -428,6 +428,8 @@ void handleAngles(){
 void handleTrigonometry() {
     int option = -1;
     while(option != 0){
+        cout << "Quick Tips:Remember SOH CAH TOA" << endl;
+        Sleep(1000);
         cout << "Choose an option:" << endl;
         cout << "1. Find side C (hypotenuse)" << endl;
         cout << "2. Find side A or B" << endl;
