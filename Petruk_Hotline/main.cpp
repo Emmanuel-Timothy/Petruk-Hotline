@@ -440,6 +440,12 @@ void handleTrigonometry() {
         cout << "7. Calculate cosecant" << endl;
         cout << "8. Calculate cotangent" << endl;
         cout << "9. Calculate using lengths" << endl; // New option
+        cout << "10. Calculate arc sine" << endl; // New option
+        cout << "11. Calculate arc cosine" << endl; // New option
+        cout << "12. Calculate arc tangent" << endl; // New option
+        cout << "13. Calculate arc secant" << endl; // New option
+        cout << "14. Calculate arc cosecant" << endl; // New option
+        cout << "15. Calculate arc cotangent" << endl; // New option
         cout << "0. Exit" << endl;
         cin >> option;
 
@@ -503,27 +509,24 @@ void handleTrigonometry() {
                 double angle;
                 cout << "Enter the angle in degrees: ";
                 cin >> angle;
-                double sine = sin(angle * M_PI / 180); // Convert degrees to radians
-                double reciprocal_sine = 1 / sine;
-                cout << "The cotangent of (" << angle << " degrees) is: " << reciprocal_sine << endl;
+                double secant = 1 / cos(angle * M_PI / 180); // Convert degrees to radians
+                cout << "The secant of " << angle << " degrees is: " << secant << endl;
                 break;
             }
             case 7: {
                 double angle;
                 cout << "Enter the angle in degrees: ";
                 cin >> angle;
-                double cosine = cos(angle * M_PI / 180); // Convert degrees to radians
-                double reciprocal_cosine = 1 / cosine;
-                cout << "The secant of (" << angle << " degrees) is: " << reciprocal_cosine << endl;
+                double cosecant = 1 / sin(angle * M_PI / 180); // Convert degrees to radians
+                cout << "The cosecant of " << angle << " degrees is: " << cosecant << endl;
                 break;
             }
             case 8: {
                 double angle;
                 cout << "Enter the angle in degrees: ";
                 cin >> angle;
-                double tangent = tan(angle * M_PI / 180); // Convert degrees to radians
-                double reciprocal_tangent = 1 / tangent;
-                cout << "The cotangent of (" << angle << " degrees) is: " << reciprocal_tangent << endl;
+                double cotangent = 1 / tan(angle * M_PI / 180); // Convert degrees to radians
+                cout << "The cotangent of " << angle << " degrees is: " << cotangent << endl;
                 break;
             }
             case 9: {
@@ -540,6 +543,54 @@ void handleTrigonometry() {
 
                 cout << "Angle A: " << angleA << " degrees" << endl;
                 cout << "Angle B: " << angleB << " degrees" << endl;
+                break;
+            }
+            case 10: {
+                double value;
+                cout << "Enter the value: ";
+                cin >> value;
+                double arcSine = asin(value) * 180 / M_PI; // Convert radians to degrees
+                cout << "The arc sine of " << value << " is: " << arcSine << " degrees" << endl;
+                break;
+            }
+            case 11: {
+                double value;
+                cout << "Enter the value: ";
+                cin >> value;
+                double arcCosine = acos(value) * 180 / M_PI; // Convert radians to degrees
+                cout << "The arc cosine of " << value << " is: " << arcCosine << " degrees" << endl;
+                break;
+            }
+            case 12: {
+                double value;
+                cout << "Enter the value: ";
+                cin >> value;
+                double arcTangent = atan(value) * 180 / M_PI; // Convert radians to degrees
+                cout << "The arc tangent of " << value << " is: " << arcTangent << " degrees" << endl;
+                break;
+            }
+            case 13: {
+                double value;
+                cout << "Enter the value: ";
+                cin >> value;
+                double arcSecant = acos(1 / value) * 180 / M_PI; // Convert radians to degrees
+                cout << "The arc secant of " << value << " is: " << arcSecant << " degrees" << endl;
+                break;
+            }
+            case 14: {
+                double value;
+                cout << "Enter the value: ";
+                cin >> value;
+                double arcCosecant = asin(1 / value) * 180 / M_PI; // Convert radians to degrees
+                cout << "The arc cosecant of " << value << " is: " << arcCosecant << " degrees" << endl;
+                break;
+            }
+            case 15: {
+                double value;
+                cout << "Enter the value: ";
+                cin >> value;
+                double arcCotangent = atan(1 / value) * 180 / M_PI; // Convert radians to degrees
+                cout << "The arc cotangent of " << value << " is: " << arcCotangent << " degrees" << endl;
                 break;
             }
             case 0:
