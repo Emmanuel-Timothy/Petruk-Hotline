@@ -418,9 +418,9 @@ void handleTrigonometry() {
         cout << "3. Calculate sine" << endl;
         cout << "4. Calculate cosine" << endl;
         cout << "5. Calculate tangent" << endl;
-        cout << "6. Calculate reciprocal of sine" << endl;
-        cout << "7. Calculate reciprocal of cosine" << endl;
-        cout << "8. Calculate reciprocal of tangent" << endl;
+        cout << "6. Calculate secant" << endl;
+        cout << "7. Calculate cosecant" << endl;
+        cout << "8. Calculate cotangent" << endl;
         cout << "9. Calculate using lengths" << endl; // New option
         cout << "0. Exit" << endl;
         cin >> option;
@@ -487,7 +487,7 @@ void handleTrigonometry() {
                 cin >> angle;
                 double sine = sin(angle * M_PI / 180); // Convert degrees to radians
                 double reciprocal_sine = 1 / sine;
-                cout << "The reciprocal of sine(" << angle << " degrees) is: " << reciprocal_sine << endl;
+                cout << "The cotangent of (" << angle << " degrees) is: " << reciprocal_sine << endl;
                 break;
             }
             case 7: {
@@ -496,7 +496,7 @@ void handleTrigonometry() {
                 cin >> angle;
                 double cosine = cos(angle * M_PI / 180); // Convert degrees to radians
                 double reciprocal_cosine = 1 / cosine;
-                cout << "The reciprocal of cosine(" << angle << " degrees) is: " << reciprocal_cosine << endl;
+                cout << "The secant of (" << angle << " degrees) is: " << reciprocal_cosine << endl;
                 break;
             }
             case 8: {
@@ -505,7 +505,7 @@ void handleTrigonometry() {
                 cin >> angle;
                 double tangent = tan(angle * M_PI / 180); // Convert degrees to radians
                 double reciprocal_tangent = 1 / tangent;
-                cout << "The reciprocal of tangent(" << angle << " degrees) is: " << reciprocal_tangent << endl;
+                cout << "The cotangent of (" << angle << " degrees) is: " << reciprocal_tangent << endl;
                 break;
             }
             case 9: {
