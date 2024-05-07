@@ -198,6 +198,7 @@ void handleCalculator() {
 }
 
 // Function to handle Geometry option
+// Function to handle Geometry option
 void handleGeometry() {
     int geometry;
     bool exitGeometry = false;  // Flag to control exiting the geometry menu
@@ -285,8 +286,6 @@ void handleGeometry() {
                 area = ((base1 + base2) * height) / 2;
                 cout << "Area of the trapezium: " << area << endl;
                 break;
-            }
-
             }
             case 7: {
                 // Prism calculations
