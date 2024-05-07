@@ -80,7 +80,7 @@ void handlePEMDAS() {
         Sleep(1000);
         cout << "So PEMDAS is an acronym" << endl;
         Sleep(1000);
-        cout << "So P is for parentheses()" << endl;
+        cout << "So P is for Parentheses()" << endl;
         Sleep(1000);
         cout << "So E is for Exponent" << endl;
         Sleep(1000);
@@ -197,7 +197,6 @@ void handleCalculator() {
     }
 }
 
-// Function to handle Geometry option
 // Function to handle Geometry option
 void handleGeometry() {
     int geometry;
