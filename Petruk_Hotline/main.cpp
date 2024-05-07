@@ -254,21 +254,39 @@ void handleGeometry() {
             }
             case 4: {
                 // Kite calculations
-                // Implement calculations for kite
-                cout << "Kite calculations are not implemented yet." << endl;
+                double diagonal1, diagonal2, area;
+                cout << "Enter the lengths of the two diagonals of the kite: ";
+                cin >> diagonal1 >> diagonal2;
+
+                area = (diagonal1 * diagonal2) / 2;
+                cout << "Area of the kite: " << area << endl;
                 break;
             }
             case 5: {
                 // Parallelogram calculations
-                // Implement calculations for parallelogram
-                cout << "Parallelogram calculations are not implemented yet." << endl;
+                double base, height, area;
+                cout << "Enter the base length of the parallelogram: ";
+                cin >> base;
+                cout << "Enter the height of the parallelogram: ";
+                cin >> height;
+
+                area = base * height;
+                cout << "Area of the parallelogram: " << area << endl;
                 break;
             }
             case 6: {
                 // Trapezium calculations
-                // Implement calculations for trapezium
-                cout << "Trapezium calculations are not implemented yet." << endl;
+                double base1, base2, height, area;
+                cout << "Enter the lengths of the two bases of the trapezium: ";
+                cin >> base1 >> base2;
+                cout << "Enter the height of the trapezium: ";
+                cin >> height;
+
+                area = ((base1 + base2) * height) / 2;
+                cout << "Area of the trapezium: " << area << endl;
                 break;
+            }
+
             }
             case 7: {
                 // Prism calculations
