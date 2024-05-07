@@ -1,10 +1,10 @@
-#include<iostream>
-#include<Windows.h>
-#include<cmath>
-#include<algorithm>
-#include<vector>
-#include<numeric>
-#include<unordered_map>
+#include<iostream> // To handle input-output tasks
+#include<Windows.h> // For Windows-specific operations
+#include<cmath> // For math operations like square root, etc.
+#include<algorithm> // For sorting and searching data
+#include<vector> // For creating lists of items
+#include<numeric> // For doing math on sequences of numbers
+#include<unordered_map> // For storing data in a flexible way
 
 using namespace std;
 
