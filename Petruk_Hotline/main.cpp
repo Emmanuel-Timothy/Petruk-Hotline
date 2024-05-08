@@ -210,6 +210,7 @@ void handleCalculator() {
         cout << "Choose an option:" << endl;
         cout << "1. Arithmetic Calculation" << endl;
         cout << "2. Weight Calculation" << endl;
+        cout << "3. Degree Converter" << endl;
         cout << "0. Back to Main Menu" << endl;
         cin >> calc;
 
@@ -981,7 +982,6 @@ int main(){
     }
 
     return 0;
-
 
 
 
