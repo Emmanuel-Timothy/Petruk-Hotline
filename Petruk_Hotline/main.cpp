@@ -15,7 +15,7 @@ void displayWelcomeMessage() {
     cout << "1.Sequence, 2.PEMDAS, 3.Calculator, 4.Geometry, 5.Angles, 6.Trigonometry, 7.Quadratic, 8.Statistic, 9.Probability , 0.Exit" << endl;
 }
 
-// Function to convert Celsius to Fahrenheit, Réaumur, and Kelvin
+// Function to convert Celsius to Fahrenheit, Reaumur, and Kelvin
 void celcius() {
     float C;
     cout << "Enter degree in Celsius: ";
@@ -25,16 +25,16 @@ void celcius() {
     float F = (C * 9 / 5) + 32;
     cout << "Temperature in Fahrenheit: " << F << endl;
 
-    // Converting Celsius to Réaumur
+    // Converting Celsius to Reaumur
     float R = C * 4 / 5;
-    cout << "Temperature in Réaumur: " << R << endl;
+    cout << "Temperature in Reaumur: " << R << endl;
 
     // Converting Celsius to Kelvin
     float K = C + 273.15;
     cout << "Temperature in Kelvin: " << K << endl;
 }
 
-// Function to convert Fahrenheit to Celsius, Réaumur, and Kelvin
+// Function to convert Fahrenheit to Celsius, Reaumur, and Kelvin
 void fahrenheit() {
     float F;
     cout << "Enter degree in Fahrenheit: ";
@@ -44,35 +44,35 @@ void fahrenheit() {
     float C = (F - 32) * 5 / 9;
     cout << "Temperature in Celsius: " << C << endl;
 
-    // Converting Fahrenheit to Réaumur
+    // Converting Fahrenheit to Reaumur
     float R = (F - 32) * 4 / 9;
-    cout << "Temperature in Réaumur: " << R << endl;
+    cout << "Temperature in Reaumur: " << R << endl;
 
     // Converting Fahrenheit to Kelvin
     float K = (F + 459.67) * 5 / 9;
     cout << "Temperature in Kelvin: " << K << endl;
 }
 
-// Function to convert Réaumur to Celsius, Fahrenheit, and Kelvin
-void reamur() {
+// Function to convert Reaumur to Celsius, Fahrenheit, and Kelvin
+void Reaumur() {
     float R;
-    cout << "Enter degree in Réaumur: ";
+    cout << "Enter degree in Reaumur: ";
     cin >> R;
 
-    // Converting Réaumur to Celsius
+    // Converting Reaumur to Celsius
     float C = R * 5 / 4;
     cout << "Temperature in Celsius: " << C << endl;
 
-    // Converting Réaumur to Fahrenheit
+    // Converting Reaumur to Fahrenheit
     float F = (R * 9 / 4) + 32;
     cout << "Temperature in Fahrenheit: " << F << endl;
 
-    // Converting Réaumur to Kelvin
+    // Converting Reaumur to Kelvin
     float K = (R * 5 / 4) + 273.15;
     cout << "Temperature in Kelvin: " << K << endl;
 }
 
-// Function to convert Kelvin to Celsius, Fahrenheit, and Réaumur
+// Function to convert Kelvin to Celsius, Fahrenheit, and Reaumur
 void kalvin() {
     float K;
     cout << "Enter degree in Kelvin: ";
@@ -86,9 +86,9 @@ void kalvin() {
     float F = (K * 9 / 5) - 459.67;
     cout << "Temperature in Fahrenheit: " << F << endl;
 
-    // Converting Kelvin to Réaumur
+    // Converting Kelvin to Reaumur
     float R = (K - 273.15) * 4 / 5;
-    cout << "Temperature in Réaumur: " << R << endl;
+    cout << "Temperature in Reaumur: " << R << endl;
 }
 
 // Function to handle Sequence option
@@ -268,10 +268,10 @@ void handleCalculator() {
                 // Temperature conversion code
                 int tempOption;
                 cout << "Choose temperature conversion type:" << endl;
-                cout << "1. Celsius to Fahrenheit, Réaumur, and Kelvin" << endl;
-                cout << "2. Fahrenheit to Celsius, Réaumur, and Kelvin" << endl;
-                cout << "3. Réaumur to Celsius, Fahrenheit, and Kelvin" << endl;
-                cout << "4. Kelvin to Celsius, Fahrenheit, and Réaumur" << endl;
+                cout << "1. Celsius to Fahrenheit, Reaumur, and Kelvin" << endl;
+                cout << "2. Fahrenheit to Celsius, Reaumur, and Kelvin" << endl;
+                cout << "3. Reaumur to Celsius, Fahrenheit, and Kelvin" << endl;
+                cout << "4. Kelvin to Celsius, Fahrenheit, and Reaumur" << endl;
                 cin >> tempOption;
 
                 switch(tempOption) {
@@ -282,7 +282,7 @@ void handleCalculator() {
                         fahrenheit();
                         break;
                     case 3:
-                        reamur();
+                        Reaumur();
                         break;
                     case 4:
                         kalvin();
