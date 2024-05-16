@@ -2,7 +2,7 @@
 #include<Windows.h> // For Windows-specific operations
 #include<cmath> // For math operations like square root, etc.
 #include<algorithm> // For sorting and searching data
-#include<vector> // For creating lists of items
+#include<vector> // For creating lists of items(more flexible)
 #include<numeric> // For doing math on sequences of numbers
 #include<unordered_map> // For storing data in a flexible way
 
