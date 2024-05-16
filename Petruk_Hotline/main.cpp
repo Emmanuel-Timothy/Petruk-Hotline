@@ -4,7 +4,7 @@
 #include<algorithm> // For sorting and searching data
 #include<vector> // For creating lists of items(more flexible)
 #include<numeric> // For doing math on sequences of numbers
-#include<unordered_map> // For storing data in a flexible way
+#include<unordered_map> // For storing data in a flexible way(to count mode)
 
 using namespace std;
 
