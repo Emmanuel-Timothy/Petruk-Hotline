@@ -545,13 +545,13 @@ void handleTrigonometry() {
         cout << "6. Calculate secant" << endl;
         cout << "7. Calculate cosecant" << endl;
         cout << "8. Calculate cotangent" << endl;
-        cout << "9. Calculate using lengths" << endl; // New option
-        cout << "10. Calculate arc sine" << endl; // New option
-        cout << "11. Calculate arc cosine" << endl; // New option
-        cout << "12. Calculate arc tangent" << endl; // New option
-        cout << "13. Calculate arc secant" << endl; // New option
-        cout << "14. Calculate arc cosecant" << endl; // New option
-        cout << "15. Calculate arc cotangent" << endl; // New option
+        cout << "9. Calculate using lengths" << endl;
+        cout << "10. Calculate arc sine" << endl;
+        cout << "11. Calculate arc cosine" << endl;
+        cout << "12. Calculate arc tangent" << endl;
+        cout << "13. Calculate arc secant" << endl;
+        cout << "14. Calculate arc cosecant" << endl;
+        cout << "15. Calculate arc cotangent" << endl;
         cout << "0. Exit" << endl;
         cin >> option;
 
